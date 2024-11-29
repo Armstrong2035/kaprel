@@ -55,12 +55,6 @@ export default function BusinessGoals() {
 
   return (
     <Container>
-      <Typography sx={{ mt: 1 }}>
-        Zeena and I enjoyed our conversation with Menna. It was fun getting to
-        understand your needs. Just to clarify, you are rebuilding your website
-        for the following reasons:
-      </Typography>
-
       <Stack spacing={3} sx={{ mt: 1 }}>
         {clientNeeds.map((need, index) => (
           <Box
