@@ -55,8 +55,6 @@ export default function BusinessGoals() {
 
   return (
     <Container>
-      <Typography variant="h2">Dear Kapral</Typography>
-
       <Typography sx={{ mt: 1 }}>
         Zeena and I enjoyed our conversation with Menna. It was fun getting to
         understand your needs. Just to clarify, you are rebuilding your website
