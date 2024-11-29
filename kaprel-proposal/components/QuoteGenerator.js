@@ -15,7 +15,7 @@ export default function QuoteGenerator() {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ mt: 5 }}>
+    <Container maxWidth="lg" sx={{ mt: 5, mb: 5 }}>
       <Typography variant="h5" gutterBottom>
         Website Development Options
       </Typography>

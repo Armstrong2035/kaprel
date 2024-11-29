@@ -8,6 +8,7 @@ import {
   ListItemText,
   Box,
   Container,
+  Stack,
 } from "@mui/material";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import AddOnSelector from "./AddOnSelector";
@@ -19,7 +20,7 @@ export default function OptionColumn({
   calculateTotal,
 }) {
   return (
-    <Box elevation={3} sx={{ p: 5, height: "100%", border: "1px solid grey" }}>
+    <Box elevation={3} sx={{ p: 3, border: "1px solid grey", mb: 5 }}>
       <Typography variant="h6" gutterBottom>
         {data.type}
       </Typography>
@@ -61,10 +62,13 @@ export default function OptionColumn({
       <List dense>
         {data.timeline.map((phase, index) => (
           <ListItem key={index} disableGutters>
-            <ListItemText
-              primary={phase}
-              primaryTypographyProps={{ variant: "body2" }}
-            />
+            <Stack spacing={2} direction={"row"}>
+              <Typography variant={"body"}>{`${index + 1}. `}</Typography>
+              <ListItemText
+                primary={phase}
+                primaryTypographyProps={{ variant: "body" }}
+              />
+            </Stack>
           </ListItem>
         ))}
       </List>
@@ -73,6 +77,12 @@ export default function OptionColumn({
       <Typography variant="h6" color="primary" sx={{ my: 2 }}>
         Base Price: {data.pricing.base} AED
       </Typography>
+      {data.type === "Update Current WordPress Website" && (
+        <Typography>
+          Please note that this price covers only the audit. After we have seen
+          what the previous developer did, we will give the full price.
+        </Typography>
+      )}
 
       {/* Add-ons Selector */}
       <AddOnSelector
@@ -83,11 +93,11 @@ export default function OptionColumn({
 
       {/* Total Calculation */}
       <Box sx={{ mt: 2, textAlign: "left" }}>
-        <Typography variant="h5" color="primary">
+        <Typography variant="h6" color="primary">
           Total: {calculateTotal(data.pricing.base, selectedAddons)} AED
         </Typography>
         {selectedAddons.length >= 2 && (
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body" color="text.secondary">
             10% discount applied for multiple add-ons
           </Typography>
         )}

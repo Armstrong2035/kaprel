@@ -40,6 +40,7 @@ export default function AddOnsSelector({
                 />
               }
               label={`${addon.name} - ${addon.price} AED`}
+              componentsProps={{ typography: { variant: "body" } }}
             />
           </ListItem>
         ))}

@@ -1,11 +1,13 @@
 export const wordpressData = {
   type: "Update Current WordPress Website",
   deliverables: [
+    "Full audit of current website backend",
     "UX/UI design improvements",
     "Copywriting updates for consistency",
     "Website development for navigation and routing fixes",
     "Image and content updates",
     "Accessibility enhancements",
+    "3 months support after handover",
   ],
   timeline: [
     "Rough audit on the current website (2 weeks)",
@@ -15,7 +17,7 @@ export const wordpressData = {
   message:
     "Due to the fact that a different developer built this, we do not know what to expect on the back end until we can access your WordPress account.",
   pricing: {
-    base: 7000,
+    base: 1500,
     addons: [
       { name: "Customer support (chatbot)", price: 2000 },
       { name: "Automatic quote generator", price: 2000 },
@@ -36,11 +38,11 @@ export const newWebsiteData = {
     "Responsive design",
     "Technical and on-page SEO",
     "Progressive Web App functionality",
+    "3 months support after handover",
   ],
   timeline: [
     "Mock-up design, layout, copy, imagery (1 week)",
     "First draft of fully functional website (2 weeks)",
-    "3 months support after handover",
   ],
   message:
     "We can give you a better website if we build from scratch, tailored precisely to your business needs.",
